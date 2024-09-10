@@ -8,6 +8,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI TimeText;
     [SerializeField] int minute;
     [SerializeField] int second;
+    [SerializeField] GameObject GameOverPanel;
     float elapsedTime;
     bool counter_flag = false;
 
@@ -32,10 +33,20 @@ public class TimeManager : MonoBehaviour
         }
 
         TimeText.text = ((int)elapsedTime / 60).ToString() + ":" + ((int)elapsedTime % 60).ToString();
+
+        if(elapsedTime < 0)
+        {
+            ChangeGameOver();
+        }
     }
 
-    void TimeStart()
+    public void TimeStart()
     {
         counter_flag = true;
+    }
+
+    public void ChangeGameOver()
+    {
+        GameOverPanel.SetActive(true);
     }
 }
