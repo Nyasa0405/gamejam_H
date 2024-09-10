@@ -38,8 +38,8 @@ public class PlayerController : MonoBehaviour
 
     void Player_Move()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float z = Input.GetAxisRaw("Vertical");
+        float x = Input.GetAxisRaw("Vertical");
+        float z = Input.GetAxisRaw("Horizontal");
         Player = new Vector3(x, 0, z);
         Player.Normalize();
         Velocity_player = Player * Speed;
