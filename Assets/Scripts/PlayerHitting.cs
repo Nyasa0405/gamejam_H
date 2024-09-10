@@ -12,13 +12,13 @@ public class PlayerHitting : MonoBehaviour
             if (other.gameObject.CompareTag("Ob_Head"))
             {
                 Is_Hit = true;
-                Debug.Log("Head");
+                //Debug.Log("Head");
                 Invoke("Reset_Flag", 1.5f);
             }
             else if (other.gameObject.CompareTag("Ob_Under"))
             {
                 Is_Hit = true;
-                Debug.Log("Under");
+                //Debug.Log("Under");
                 Invoke("Reset_Flag", 1.5f);
             }
         }

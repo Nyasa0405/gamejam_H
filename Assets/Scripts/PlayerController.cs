@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
         if (Is_Ground)
         {
             player.AddForce(transform.up * Height, ForceMode.Impulse);
-            Debug.Log("jump");
+            //Debug.Log("jump");
             Is_Ground = false;
         }
         else return;
@@ -66,14 +66,14 @@ public class PlayerController : MonoBehaviour
         player.velocity = Vector3.zero;
         player.angularVelocity = Vector3.zero;
         Flag_Controller = false;
-        Debug.Log("Stop");
+        //Debug.Log("Stop");
         Invoke("Player_Repair", Stop_Time);
     }
 
     void Player_Repair()
     {
         Flag_Controller = true;
-        Debug.Log("Move");
+        //Debug.Log("Move");
     }
 
     private void OnCollisionEnter(Collision other)
