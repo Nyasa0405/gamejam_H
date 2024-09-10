@@ -24,15 +24,13 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 15364e8973a38a046a238d524148ec3c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _ALPHATEST_ON
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
-  stringTagMap:
-    RenderType: TransparentCutout
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -71,7 +69,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
-        m_Texture: {fileID: 2800000, guid: 9e162eb68890b2e479fc433da646e23a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5c02fa5bb8784d945834c98acb696dc8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -79,7 +77,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 3079d04d8e6d49847921b1584cc4c0e8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 651d0d1534738d0468b67d2316f85085, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
