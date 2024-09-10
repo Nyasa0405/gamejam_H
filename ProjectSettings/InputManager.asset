@@ -23,8 +23,8 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Vertical
-    descriptiveName: Stick L up
-    descriptiveNegativeName: 
+    descriptiveName: Stick L down
+    descriptiveNegativeName: Stick L up
     negativeButton: 
     positiveButton: up
     altNegativeButton: 
