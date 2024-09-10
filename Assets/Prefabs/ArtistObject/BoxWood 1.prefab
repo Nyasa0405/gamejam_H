@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2ab04574b2140984b9a8cf5cb3d89db1, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 3b822892ebf550842b1d06314687188e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4068373912626513877, guid: 2def80caa91fe7d40b9cebe656bf84de, type: 3}
     - target: {fileID: 919132149155446097, guid: 3b822892ebf550842b1d06314687188e, type: 3}
       propertyPath: m_Name
       value: BoxWood 1
