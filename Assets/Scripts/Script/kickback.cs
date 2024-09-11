@@ -10,7 +10,8 @@ public class kickback : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        rb.AddForce(new Vector3(power.x, power.y, 0), ForceMode.Impulse);
     }
 
     // Update is called once per frame
@@ -21,6 +22,5 @@ public class kickback : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        rb.AddForce(new Vector3(power.x, power.y, 0));
     }
 }
