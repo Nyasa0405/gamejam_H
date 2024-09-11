@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e43cdddc7517a043a61f7b87f634ec9
+guid: a84b06af5e2c5cf47b4911112bce4728
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,43 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: player_tex
-    second: {fileID: 2100000, guid: 8077fc6c02e5201488253cf22bc2cb26, type: 2}
+      name: blinn1
+    second: {fileID: 2100000, guid: d4daa6553d172a34698c7c1e1314d4de, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert1_Base_color
-    second: {fileID: 2800000, guid: 5730672b8ca358848a49f50a631f4cde, type: 3}
+      name: blinn2
+    second: {fileID: 2100000, guid: b72132d7050727c4a9830f74a14eab16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: a22b249abc0a11f409c7a22f19549a6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert10
+    second: {fileID: 2100000, guid: 296619a31c05ee74b9f29b74d6b5f7d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert11
+    second: {fileID: 2100000, guid: cbdc3d85cf2707f4589d07a0cfdbdb75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__blinn1
+    second: {fileID: 2100000, guid: 6f86cfe3c83af8d4c8f8f54628ceeeec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__blinn1
+    second: {fileID: 2100000, guid: 95ca4119bc6fe96438b949aea24efc70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 4bcb266a7e9987a4b937940f1d4c9843, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -34,7 +64,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -103,13 +133,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
