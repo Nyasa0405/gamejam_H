@@ -6,6 +6,8 @@ public class kickback : MonoBehaviour
 {
     [SerializeField] Vector3 power;
     Rigidbody rb;
+    [SerializeField] GameObject GameOverPanel;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class kickback : MonoBehaviour
         if (collision.gameObject.tag == "Car")
         {
             rb.AddForce(new Vector3(power.x, power.y, 0), ForceMode.Impulse);
+            GameOverPanel.SetActive(true);
         }
     }
 }
