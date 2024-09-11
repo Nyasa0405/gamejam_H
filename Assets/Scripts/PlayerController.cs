@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     //Audio
     public AudioClip sound1;
     [SerializeField] AudioSource audioSource;
+    bool audioFlag = true;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +42,11 @@ public class PlayerController : MonoBehaviour
     {
        if (PlayerHitting.Is_Hit)
        {
-            Player_Stan();
-       } 
+            if(audioFlag)
+            {
+                Player_Stan();
+            }
+        } 
 
        if(Flag_Controller) 
        {
@@ -64,7 +68,7 @@ public class PlayerController : MonoBehaviour
         player.velocity = new Vector3(Velocity_player.x, player.velocity.y, Velocity_player.z);
 
         // アニメーション再生（run）
-        anim.SetBool("run", true);
+        //anim.SetBool("run", true);
     }
 
     void Player_Jump()
@@ -76,7 +80,7 @@ public class PlayerController : MonoBehaviour
             Is_Ground = false;
 
             // アニメーション再生（jump）
-            anim.SetBool("jump", true);
+            //anim.SetBool("jump", true);
         }
         else return;
     }
@@ -91,10 +95,11 @@ public class PlayerController : MonoBehaviour
         Invoke("Player_Repair", Stop_Time);
 
         // アニメーション再生（damege）
-        anim.SetBool("damage", true);
+        //anim.SetBool("damage", true);
 
         // サウンド再生
         audioSource.PlayOneShot(sound1);
+        audioFlag = false;
     }
 
     void Player_Repair()
@@ -102,6 +107,9 @@ public class PlayerController : MonoBehaviour
         Flag_Controller = true;
         Hukidashi.SetActive(false);
         //Debug.Log("Move");
+
+        //audioflag
+        audioFlag = true;
     }
 
     private void OnCollisionEnter(Collision other)
