@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e43cdddc7517a043a61f7b87f634ec9
+guid: 38ddde8ab7197ab4688dac3d845622a8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: player_tex
-    second: {fileID: 2100000, guid: 8077fc6c02e5201488253cf22bc2cb26, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: lambert1_Base_color
-    second: {fileID: 2800000, guid: 5730672b8ca358848a49f50a631f4cde, type: 3}
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 1dd1d319cd6c5db42a59f137cb8c4b77, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -34,7 +29,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -103,13 +98,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
