@@ -445,6 +445,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3894559580705834127, guid: c779b9f939d7bbe4fb4a9b8988df7bee, type: 3}
   m_PrefabInstance: {fileID: 1006476136213444038}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1344886794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6191066481803577352, guid: 20f4c7cbd5e500a428de544f72ff0ca6, type: 3}
+  m_PrefabInstance: {fileID: 2655460057588255347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1576237723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1294,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7387214663182841391, guid: 23a10aff90553c646af097fa9e375760, type: 3}
+      propertyPath: Text_time
+      value: 
+      objectReference: {fileID: 1344886794}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
