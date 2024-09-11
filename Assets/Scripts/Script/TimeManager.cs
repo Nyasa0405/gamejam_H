@@ -10,7 +10,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] int second;
     [SerializeField] GameObject GameOverPanel;
     float elapsedTime;
-    bool counter_flag = false;
+     public bool counter_flag = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +23,10 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TimeStart();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    TimeStart();
+        //}
         if (counter_flag)
         {
             elapsedTime -= Time.deltaTime;

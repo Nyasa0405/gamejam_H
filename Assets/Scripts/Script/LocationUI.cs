@@ -10,6 +10,9 @@ public class LocationUI : MonoBehaviour
     [SerializeField] Slider LocationSlider;
     [SerializeField] GameObject GameClearPanel;
 
+    [SerializeField] GameObject Text_time;
+    TimeManager timeManager;
+
     Vector3 Player_pos;
     Vector3 Goal_pos;
 
@@ -18,6 +21,7 @@ public class LocationUI : MonoBehaviour
     {
         LocationSlider = GetComponent<Slider>();
         Goal_pos = GoalObj.transform.position;
+        timeManager = Text_time.GetComponent<TimeManager>();
     }
 
     // Update is called once per frame
@@ -38,5 +42,6 @@ public class LocationUI : MonoBehaviour
     public void ChangeGameClear()
     {
         GameClearPanel.SetActive(true);
+        timeManager.counter_flag = false;
     }
 }
