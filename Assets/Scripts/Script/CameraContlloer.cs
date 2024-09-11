@@ -12,10 +12,12 @@ public class CameraContlloer : MonoBehaviour
 
     [SerializeField] float distance;
 
+    Vector3 PlayerObjx;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerObjx = PlayerObj.transform.position;
     }
 
     // Update is called once per frame
@@ -24,6 +26,6 @@ public class CameraContlloer : MonoBehaviour
         Player_pos = PlayerObj.transform.position;
         Camera_pos = CameraObj.transform.position;
 
-        transform.position = new Vector3(0, Camera_pos.y, Player_pos.z - distance);
+        transform.position = new Vector3(PlayerObjx.x, Camera_pos.y, Player_pos.z - distance);
     }
 }
