@@ -16,6 +16,14 @@ public class PlayerController : MonoBehaviour
     public GameObject Hukidashi; 
     public static bool Flag_Controller;
     private bool Is_Ground;
+
+    // Animator
+    private Animator anim = null;
+
+    //Audio
+    public AudioClip sound1;
+    [SerializeField] AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +31,9 @@ public class PlayerController : MonoBehaviour
         Flag_Controller = true;
         Is_Ground = false;
         Hukidashi.SetActive(false);
+
+        //Animatorコンポーネント追加
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -51,6 +62,9 @@ public class PlayerController : MonoBehaviour
             Player_Jump();
         }
         player.velocity = new Vector3(Velocity_player.x, player.velocity.y, Velocity_player.z);
+
+        // アニメーション再生（run）
+        anim.SetBool("run", true);
     }
 
     void Player_Jump()
@@ -60,6 +74,9 @@ public class PlayerController : MonoBehaviour
             player.AddForce(transform.up * Height, ForceMode.Impulse);
             //Debug.Log("jump");
             Is_Ground = false;
+
+            // アニメーション再生（jump）
+            anim.SetBool("jump", true);
         }
         else return;
     }
@@ -72,6 +89,12 @@ public class PlayerController : MonoBehaviour
         Hukidashi.SetActive(true);
         //Debug.Log("Stop");
         Invoke("Player_Repair", Stop_Time);
+
+        // アニメーション再生（damege）
+        anim.SetBool("damage", true);
+
+        // サウンド再生
+        audioSource.PlayOneShot(sound1);
     }
 
     void Player_Repair()
