@@ -68,7 +68,9 @@ public class PlayerController : MonoBehaviour
         player.velocity = new Vector3(Velocity_player.x, player.velocity.y, Velocity_player.z);
 
         // アニメーション再生（run）
-        //anim.SetBool("run", true);
+        anim.SetBool("run", true);
+        anim.SetBool("jump", false);
+        anim.SetBool("damage", false);
     }
 
     void Player_Jump()
@@ -80,7 +82,9 @@ public class PlayerController : MonoBehaviour
             Is_Ground = false;
 
             // アニメーション再生（jump）
-            //anim.SetBool("jump", true);
+            anim.SetBool("jump", true);
+            anim.SetBool("damage", false);
+            anim.SetBool("run", false);
         }
         else return;
     }
@@ -95,7 +99,9 @@ public class PlayerController : MonoBehaviour
         Invoke("Player_Repair", Stop_Time);
 
         // アニメーション再生（damege）
-        //anim.SetBool("damage", true);
+        anim.SetBool("damage", true);
+        anim.SetBool("run", false);
+        anim.SetBool("jump", false);
 
         // サウンド再生
         audioSource.PlayOneShot(sound1);
