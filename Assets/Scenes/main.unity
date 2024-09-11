@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028477, g: 0.22571516, b: 0.30692387, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028462, g: 0.225715, b: 0.3069236, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1331,59 +1331,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf7f482e37cce304f81bdbc1034d5ee2, type: 3}
---- !u!1 &1229511976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3567176039660505746, guid: f1e28dbe75ba43348a497f5d5c6731e4, type: 3}
-  m_PrefabInstance: {fileID: 1939534196}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1229511978
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229511976}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!65 &1229511979
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229511976}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.9, y: 1, z: 3}
-  m_Center: {x: -2, y: -0.28, z: 6.5}
 --- !u!1 &1244056798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1343,7 @@ GameObject:
   - component: {fileID: 1244056800}
   - component: {fileID: 1244056799}
   - component: {fileID: 1244056802}
+  - component: {fileID: 1244056803}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1470,8 +1418,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244056798}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3000829, y: 0.013824571, z: -0.0042614187, w: 0.9538034}
-  m_LocalPosition: {x: 4.445063, y: 7.231127, z: -6.0441475}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.92, y: 2.35, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1521,6 +1469,21 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1244056803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244056798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3e0564e07c01343acde238873d9c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObj: {fileID: 1477989080}
+  CameraObj: {fileID: 1244056798}
+  distance: 10
 --- !u!1 &1296496375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +1940,8 @@ MonoBehaviour:
   Height: 5
   Speed: 5
   Stop_Time: 3
-  player: {fileID: 0}
+  player: {fileID: 1477989087}
+  Hukidashi: {fileID: 8063964755931327266, guid: c779b9f939d7bbe4fb4a9b8988df7bee, type: 3}
 --- !u!65 &1477989083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2406,13 +2370,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3567176039660505746, guid: f1e28dbe75ba43348a497f5d5c6731e4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1229511979}
-    - targetCorrespondingSourceObject: {fileID: 3567176039660505746, guid: f1e28dbe75ba43348a497f5d5c6731e4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1229511978}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1e28dbe75ba43348a497f5d5c6731e4, type: 3}
 --- !u!1001 &1947882943
 PrefabInstance:

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerHitting : MonoBehaviour
 {
-    public static bool Is_Hit;
+    public static bool Is_Hit; 
     void OnCollisionEnter(Collision other)
     {
+       
         if (!Is_Hit)
         {
             if (other.gameObject.CompareTag("Ob_Head"))
@@ -29,4 +30,5 @@ public class PlayerHitting : MonoBehaviour
         Is_Hit = false;
     }
 
+    
 }
