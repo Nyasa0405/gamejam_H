@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     Vector3 Player;
     Vector3 Velocity_player;
     public Rigidbody player;
+    public GameObject Hukidashi; 
     public static bool Flag_Controller;
     private bool Is_Ground;
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour
         player = GetComponent<Rigidbody>();
         Flag_Controller = true;
         Is_Ground = false;
+        Hukidashi.SetActive(false);
     }
 
     // Update is called once per frame
@@ -66,6 +69,7 @@ public class PlayerController : MonoBehaviour
         player.velocity = Vector3.zero;
         player.angularVelocity = Vector3.zero;
         Flag_Controller = false;
+        Hukidashi.SetActive(true);
         //Debug.Log("Stop");
         Invoke("Player_Repair", Stop_Time);
     }
@@ -73,6 +77,7 @@ public class PlayerController : MonoBehaviour
     void Player_Repair()
     {
         Flag_Controller = true;
+        Hukidashi.SetActive(false);
         //Debug.Log("Move");
     }
 
