@@ -9,12 +9,17 @@ public class TimeManager : MonoBehaviour
     [SerializeField] int minute;
     [SerializeField] int second;
     [SerializeField] GameObject GameOverPanel;
+
+    // 現在時間
     float elapsedTime;
-     public bool counter_flag = false;
+
+    // カウント開始のフラッグ
+    [System.NonSerialized] public bool counter_flag = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        // 分を秒に変換
         minute = minute * 60;
 
         elapsedTime = minute + second;
@@ -23,20 +28,20 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    TimeStart();
-        //}
         if (counter_flag)
         {
             elapsedTime -= Time.deltaTime;
         }
 
-        TimeText.text = ((int)elapsedTime / 60).ToString() + ":" + ((int)elapsedTime % 60).ToString();
-
+        // 0秒以下（タイムアップ）になったら
         if(elapsedTime < 0)
         {
             ChangeGameOver();
+        }
+        else
+        {
+            // 残り時間をTextで表示
+            TimeText.text = ((int)elapsedTime / 60).ToString() + ":" + ((int)elapsedTime % 60).ToString();
         }
     }
 
@@ -48,5 +53,7 @@ public class TimeManager : MonoBehaviour
     public void ChangeGameOver()
     {
         GameOverPanel.SetActive(true);
+        counter_flag = false;
+        TimeText.text = "";
     }
 }

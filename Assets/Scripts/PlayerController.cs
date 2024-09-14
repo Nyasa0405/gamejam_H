@@ -67,8 +67,18 @@ public class PlayerController : MonoBehaviour
         }
         player.velocity = new Vector3(Velocity_player.x, player.velocity.y, Velocity_player.z);
 
-        // アニメーション再生（run）
-        //anim.SetBool("run", true);
+        //スティック倒したらrunモーション再生
+        // 絶対値設定
+        float threshold = 0.1f;
+
+        if (Mathf.Abs(x) > threshold || Mathf.Abs(z) > threshold)
+        {
+            anim.SetBool("run", true);
+        }
+        else
+        {
+            anim.SetBool("run", false);
+        }
     }
 
     void Player_Jump()
@@ -80,7 +90,8 @@ public class PlayerController : MonoBehaviour
             Is_Ground = false;
 
             // アニメーション再生（jump）
-            //anim.SetBool("jump", true);
+            anim.SetBool("run", false);
+            anim.SetTrigger("jump");
         }
         else return;
     }
@@ -95,9 +106,10 @@ public class PlayerController : MonoBehaviour
         Invoke("Player_Repair", Stop_Time);
 
         // アニメーション再生（damege）
-        //anim.SetBool("damage", true);
+        anim.SetTrigger("damage");
+        anim.SetBool("run", false);
 
-        // サウンド再生
+        // サウンド再生(一度だけ再生)
         audioSource.PlayOneShot(sound1);
         audioFlag = false;
     }
@@ -118,6 +130,5 @@ public class PlayerController : MonoBehaviour
         {
             Is_Ground = true;
         }
-
     }
 }

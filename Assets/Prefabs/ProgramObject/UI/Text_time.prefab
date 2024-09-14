@@ -69,7 +69,7 @@ MonoBehaviour:
   m_text: 00:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 12ea8453b7e94da4bb2c5a430f4623e2, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -2219888557471555746, guid: 12ea8453b7e94da4bb2c5a430f4623e2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -150,4 +150,5 @@ MonoBehaviour:
   TimeText: {fileID: 4172528840440019905}
   minute: 1
   second: 30
-  GameOverPanel: {fileID: 0}
+  GameOverPanel: {fileID: 7281666845220748960, guid: 4f04468e1b76d2345a242329d832aa41, type: 3}
+  counter_flag: 0

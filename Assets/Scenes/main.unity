@@ -7880,7 +7880,7 @@ Transform:
   m_GameObject: {fileID: 1296496375}
   serializedVersion: 2
   m_LocalRotation: {x: 0.36599812, y: 0.4531539, z: -0.2113091, w: 0.7848855}
-  m_LocalPosition: {x: -4.3056116, y: 12.12, z: -3.6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8419,7 +8419,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.4143934, y: -1.43, z: 10.6}
-  m_LocalScale: {x: 3.200069, y: 1.0846, z: 5.9100275}
+  m_LocalScale: {x: 3, y: 1, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8480,6 +8480,8 @@ MonoBehaviour:
   Stop_Time: 3
   player: {fileID: 1477989087}
   Hukidashi: {fileID: 88886532}
+  sound1: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!65 &1477989083
 BoxCollider:
   m_ObjectHideFlags: 0
